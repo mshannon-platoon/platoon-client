@@ -1,0 +1,22 @@
+.register-screen {
+    -fx-background-color: #ffffff;
+}
+
+.register-text-field {
+    -fx-focus-color: #2f7a0c;
+}
+
+.register-button {
+    -fx-background-color: #2f7a0c;
+    -fx-text-fill: #FFFFFF;
+}
+
+.register-button:hover {
+    -fx-background-color: #29650b;
+    -fx-text-fill: #FFFFFF;
+}
+
+.register-button:pressed {
+    -fx-background-color: #29650b;
+    -fx-text-fill: #FFFFFF;
+}

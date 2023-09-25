@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" spacing="20.0" styleClass="register-screen" stylesheets="@register.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ie.plat.platoonclient.register.RegisterController">
+  <padding>
+    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+  </padding>
+   <Label text="Platoon">
+      <font>
+         <Font name="Georgia" size="85.0" />
+      </font>
+   </Label>
+   <Label text="." textFill="#04ff32">
+      <font>
+         <Font name="Consolas Bold" size="85.0" />
+      </font>
+      <VBox.margin>
+         <Insets left="315.0" top="-115.0" />
+      </VBox.margin>
+   </Label>
+   <Label text="Username">
+      <VBox.margin>
+         <Insets bottom="-20.0" right="260.0" />
+      </VBox.margin>
+      <font>
+         <Font name="Tahoma Bold" size="12.0" />
+      </font>
+   </Label>
+   <TextField fx:id="username" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="320.0" styleClass="register-text-field" />
+   <Label text="Email">
+      <font>
+         <Font name="Tahoma Bold" size="12.0" />
+      </font>
+      <VBox.margin>
+         <Insets bottom="-20.0" right="285.0" />
+      </VBox.margin>
+   </Label>
+   <TextField fx:id="email" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="320.0" styleClass="register-text-field" />
+   <Label text="Password">
+      <font>
+         <Font name="Tahoma Bold" size="12.0" />
+      </font>
+      <VBox.margin>
+         <Insets bottom="-20.0" right="260.0" />
+      </VBox.margin>
+   </Label>
+   <PasswordField fx:id="password" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="320.0" styleClass="register-text-field" />
+   <Label fx:id="errorLabel" textFill="RED">
+      <VBox.margin>
+         <Insets />
+      </VBox.margin>
+      <font>
+         <Font name="Segoe UI" size="12.0" />
+      </font>
+   </Label>
+   <Button fx:id="registerButton" mnemonicParsing="false" onAction="#registerUser" prefHeight="39.0" prefWidth="264.0" styleClass="register-button" text="REGISTER">
+      <font>
+         <Font name="System Bold" size="16.0" />
+      </font></Button>
+
+   <Label text="Note: Platoon is in early alpha please report any issues to platoon.development@gmail.com">
+      <font>
+         <Font name="Tahoma Bold" size="11.0" />
+      </font>
+   </Label>
+</VBox>
