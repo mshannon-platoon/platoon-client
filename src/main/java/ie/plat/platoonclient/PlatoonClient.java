@@ -1,6 +1,7 @@
 package ie.plat.platoonclient;
 
 import ie.plat.platoonclient.http.PlatoonMonoServiceClient;
+import ie.plat.platoonclient.login.LoginController;
 import ie.plat.platoonclient.register.RegisterController;
 import ie.plat.platoonclient.register.ServiceTest;
 import java.io.IOException;
@@ -36,28 +37,60 @@ public class PlatoonClient extends Application {
     Platform.exit();
   }
 
+//  @Override
+//  public void start(Stage stage) throws IOException {
+//    // load the FXML
+//    FXMLLoader fxmlLoader = new FXMLLoader(PlatoonClientApplication.class.getResource("/register/register.fxml"));
+//
+//    // load the parent root
+//    Parent root = fxmlLoader.load();
+//
+////    root.setOnMousePressed(event -> {
+////      xOffset = event.getSceneX();
+////      yOffset = event.getSceneY();
+////    });
+////
+////    root.setOnMouseDragged(event -> {
+////      stage.setX(event.getScreenX() - xOffset);
+////      stage.setY(event.getScreenY() - yOffset);
+////    });
+//
+//    // get the controller as we can't make it a spring bean and inject our service bean
+//    RegisterController registerController = fxmlLoader.getController();
+//    PlatoonMonoServiceClient client = applicationContext.getBean(PlatoonMonoServiceClient.class);
+//    registerController.setPlatoonMonoServiceClient(client);
+//
+//    // Initialise the scene
+//    Scene scene = new Scene(root, 600, 500);
+//    stage.setTitle("Platoon");
+//    stage.setScene(scene);
+//    stage.getIcons().add(new Image("/icon.png"));
+//
+//    stage.show();
+//  }
+
   @Override
   public void start(Stage stage) throws IOException {
     // load the FXML
-    FXMLLoader fxmlLoader = new FXMLLoader(PlatoonClientApplication.class.getResource("/register/register.fxml"));
+    FXMLLoader fxmlLoader = new FXMLLoader(PlatoonClientApplication.class.getResource("/login/login.fxml"));
 
     // load the parent root
     Parent root = fxmlLoader.load();
 
-    root.setOnMousePressed(event -> {
-      xOffset = event.getSceneX();
-      yOffset = event.getSceneY();
-    });
-
-    root.setOnMouseDragged(event -> {
-      stage.setX(event.getScreenX() - xOffset);
-      stage.setY(event.getScreenY() - yOffset);
-    });
+//    root.setOnMousePressed(event -> {
+//      xOffset = event.getSceneX();
+//      yOffset = event.getSceneY();
+//    });
+//
+//    root.setOnMouseDragged(event -> {
+//      stage.setX(event.getScreenX() - xOffset);
+//      stage.setY(event.getScreenY() - yOffset);
+//    });
 
     // get the controller as we can't make it a spring bean and inject our service bean
-    RegisterController registerController = fxmlLoader.getController();
+    LoginController loginController = fxmlLoader.getController();
     PlatoonMonoServiceClient client = applicationContext.getBean(PlatoonMonoServiceClient.class);
-    registerController.setPlatoonMonoServiceClient(client);
+    loginController.setPlatoonMonoServiceClient(client);
 
     // Initialise the scene
     Scene scene = new Scene(root, 600, 500);

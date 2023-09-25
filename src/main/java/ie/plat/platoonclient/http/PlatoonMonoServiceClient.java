@@ -1,7 +1,9 @@
 package ie.plat.platoonclient.http;
 
+import ie.plat.platoonclient.http.model.req.LoginRequest;
 import ie.plat.platoonclient.http.model.req.UserRegistrationRequest;
 import ie.plat.platoonclient.http.model.req.UserToRegister;
+import ie.plat.platoonclient.http.model.res.AuthenticatedUser;
 import ie.plat.platoonclient.http.model.res.RegisteredUserDTO;
 import ie.plat.platoonclient.register.RegisterController;
 import java.util.ArrayList;
@@ -25,11 +27,12 @@ public class PlatoonMonoServiceClient {
   private String baseURL = "localhost:8080";
 
   private static final String registerURL = "/v1/register-user";
+  private static final String loginURL = "/v1/login";
 
   private RestTemplate restTemplate = new RestTemplate();
 
   public PlatoonMonoServiceClient() {
-
+    //TODO: Move this to configuration
     List<HttpMessageConverter<?>> messageConverters = new ArrayList<>();
     MappingJackson2HttpMessageConverter converter = new MappingJackson2HttpMessageConverter();
     converter.setSupportedMediaTypes(Collections.singletonList(MediaType.APPLICATION_JSON));
@@ -42,6 +45,13 @@ public class PlatoonMonoServiceClient {
     return restTemplate.postForObject(appendUrl(baseURL, registerURL),
         new UserRegistrationRequest(userToRegister),
         RegisteredUserDTO.class);
+  }
+
+  public AuthenticatedUser login(LoginRequest loginRequest) {
+    log.info("PlatoonMonoServiceClient - login - loginRequest: {}", loginRequest);
+    return restTemplate.postForObject(appendUrl(baseURL, loginURL),
+        loginRequest,
+        AuthenticatedUser.class);
   }
 
   private String appendUrl(String base, String url) {

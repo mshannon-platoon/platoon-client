@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="CENTER" spacing="20.0" styleClass="register-screen" stylesheets="@register.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ie.plat.platoonclient.register.RegisterController">
+<VBox fx:id="registerStage" alignment="CENTER" spacing="20.0" styleClass="register-screen" stylesheets="@register.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ie.plat.platoonclient.register.RegisterController">
   <padding>
     <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
   </padding>
@@ -25,6 +25,7 @@
          <Insets left="315.0" top="-115.0" />
       </VBox.margin>
    </Label>
+   <Label onMouseClicked="#renderLoginScreen" text="Already Registered? Login here." textFill="#0138eb" underline="true" />
    <Label text="Username">
       <VBox.margin>
          <Insets bottom="-20.0" right="260.0" />
