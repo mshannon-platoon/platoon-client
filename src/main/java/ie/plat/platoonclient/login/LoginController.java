@@ -91,7 +91,7 @@ public class LoginController {
     RegisterController registerController = fxmlLoader.getController();
     registerController.setPlatoonMonoServiceClient(platoonMonoServiceClient);
 
-    Scene scene = new Scene(root, 600, 500);
+    Scene scene = new Scene(root, 600, 525);
     registerStage.setTitle("Platoon");
     registerStage.setScene(scene);
     registerStage.getIcons().add(new Image("/icon.png"));

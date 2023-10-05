@@ -93,7 +93,7 @@ public class PlatoonClient extends Application {
     loginController.setPlatoonMonoServiceClient(client);
 
     // Initialise the scene
-    Scene scene = new Scene(root, 600, 500);
+    Scene scene = new Scene(root, 600, 485);
     stage.setTitle("Platoon");
     stage.setScene(scene);
     stage.getIcons().add(new Image("/icon.png"));

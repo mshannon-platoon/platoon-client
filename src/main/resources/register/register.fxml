@@ -25,10 +25,9 @@
          <Insets left="315.0" top="-115.0" />
       </VBox.margin>
    </Label>
-   <Label onMouseClicked="#renderLoginScreen" text="Already Registered? Login here." textFill="#0138eb" underline="true" />
    <Label text="Username">
       <VBox.margin>
-         <Insets bottom="-20.0" right="260.0" />
+         <Insets bottom="-10.0" right="260.0" />
       </VBox.margin>
       <font>
          <Font name="Tahoma Bold" size="12.0" />
@@ -40,7 +39,7 @@
          <Font name="Tahoma Bold" size="12.0" />
       </font>
       <VBox.margin>
-         <Insets bottom="-20.0" right="285.0" />
+         <Insets bottom="-10.0" right="285.0" />
       </VBox.margin>
    </Label>
    <TextField fx:id="email" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="320.0" styleClass="register-text-field" />
@@ -49,7 +48,7 @@
          <Font name="Tahoma Bold" size="12.0" />
       </font>
       <VBox.margin>
-         <Insets bottom="-20.0" right="260.0" />
+         <Insets bottom="-10.0" right="260.0" />
       </VBox.margin>
    </Label>
    <PasswordField fx:id="password" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="320.0" styleClass="register-text-field" />
@@ -61,14 +60,12 @@
          <Font name="Segoe UI" size="12.0" />
       </font>
    </Label>
-   <Button fx:id="registerButton" mnemonicParsing="false" onAction="#registerUser" prefHeight="39.0" prefWidth="264.0" styleClass="register-button" text="REGISTER">
+   <Button fx:id="registerButton" mnemonicParsing="false" onAction="#registerUser" prefHeight="39.0" prefWidth="320.0" styleClass="register-button" text="REGISTER">
       <font>
          <Font name="System Bold" size="16.0" />
-      </font></Button>
-
-   <Label text="Note: Platoon is in early alpha please report any issues to platoon.development@gmail.com">
-      <font>
-         <Font name="Tahoma Bold" size="11.0" />
       </font>
-   </Label>
+      <VBox.margin>
+         <Insets top="-10.0" />
+      </VBox.margin></Button>
+   <Label onMouseClicked="#renderLoginScreen" text="Already Registered? Login here." textFill="#29650b" underline="true" />
 </VBox>
