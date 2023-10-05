@@ -37,67 +37,44 @@ public class PlatoonClient extends Application {
     Platform.exit();
   }
 
-//  @Override
-//  public void start(Stage stage) throws IOException {
-//    // load the FXML
-//    FXMLLoader fxmlLoader = new FXMLLoader(PlatoonClientApplication.class.getResource("/register/register.fxml"));
+  @Override
+  public void start(Stage stage) throws IOException {
+    renderRegister(stage);
+    // load the FXML
+//    FXMLLoader fxmlLoader = new FXMLLoader(PlatoonClientApplication.class.getResource("/login/login.fxml"));
 //
 //    // load the parent root
 //    Parent root = fxmlLoader.load();
 //
-////    root.setOnMousePressed(event -> {
-////      xOffset = event.getSceneX();
-////      yOffset = event.getSceneY();
-////    });
-////
-////    root.setOnMouseDragged(event -> {
-////      stage.setX(event.getScreenX() - xOffset);
-////      stage.setY(event.getScreenY() - yOffset);
-////    });
-//
 //    // get the controller as we can't make it a spring bean and inject our service bean
-//    RegisterController registerController = fxmlLoader.getController();
+//    LoginController loginController = fxmlLoader.getController();
 //    PlatoonMonoServiceClient client = applicationContext.getBean(PlatoonMonoServiceClient.class);
-//    registerController.setPlatoonMonoServiceClient(client);
+//    loginController.setPlatoonMonoServiceClient(client);
 //
 //    // Initialise the scene
-//    Scene scene = new Scene(root, 600, 500);
+//    Scene scene = new Scene(root, 600, 485);
 //    stage.setTitle("Platoon");
 //    stage.setScene(scene);
 //    stage.getIcons().add(new Image("/icon.png"));
 //
 //    stage.show();
-//  }
+  }
 
-  @Override
-  public void start(Stage stage) throws IOException {
-    // load the FXML
-    FXMLLoader fxmlLoader = new FXMLLoader(PlatoonClientApplication.class.getResource("/login/login.fxml"));
+  public void renderRegister(Stage stage) throws IOException {
+    FXMLLoader fxmlLoader = new FXMLLoader(PlatoonClientApplication.class.getResource("/search/search-landing.fxml"));
 
     // load the parent root
     Parent root = fxmlLoader.load();
 
-//    root.setOnMousePressed(event -> {
-//      xOffset = event.getSceneX();
-//      yOffset = event.getSceneY();
-//    });
-//
-//    root.setOnMouseDragged(event -> {
-//      stage.setX(event.getScreenX() - xOffset);
-//      stage.setY(event.getScreenY() - yOffset);
-//    });
-
     // get the controller as we can't make it a spring bean and inject our service bean
-    LoginController loginController = fxmlLoader.getController();
-    PlatoonMonoServiceClient client = applicationContext.getBean(PlatoonMonoServiceClient.class);
-    loginController.setPlatoonMonoServiceClient(client);
 
     // Initialise the scene
-    Scene scene = new Scene(root, 600, 485);
+    Scene scene = new Scene(root, 1800, 1200);
     stage.setTitle("Platoon");
     stage.setScene(scene);
     stage.getIcons().add(new Image("/icon.png"));
 
     stage.show();
+
   }
 }

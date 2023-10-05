@@ -1,0 +1,10 @@
+.search-landing-button {
+    -fx-background-color: #FFFFFF;
+    -fx-text-fill: #000000;
+}
+
+
+.search-landing-button:hover {
+    -fx-background-color: #eeeeee;
+}
+
